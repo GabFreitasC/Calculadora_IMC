@@ -18,8 +18,12 @@ public class CalculoIMC {
         System.out.print("Digite 'S' ou 'N': ");
         String option = input.next().toLowerCase();
         
-        if(option.equals("s")){
-            System.out.print("\nInforme sua altura em metros (exemplo: 1,75): ");
+        if(!option.equals("s")){
+            System.out.println("Sem problemas, volte quando quiser :)");
+            return;
+        }
+        
+        System.out.print("\nInforme sua altura em metros (exemplo: 1,75): ");
             double altura = input.nextDouble();
             
             System.out.print("Agora informe o seu peso em kg (exemplo: 51,5): ");
@@ -30,9 +34,6 @@ public class CalculoIMC {
             System.out.print("\nCalculando...\n");
             
             System.out.printf("\n%s, seu IMC é: %.2f%n",name, imc);
-        }else{
-            System.out.println("Sem problemas, volte quando quiser :)");
-        }
     }
     
 }
